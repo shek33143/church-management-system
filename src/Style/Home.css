@@ -1,0 +1,1084 @@
+/* =========================================
+   HOME PAGE
+========================================= */
+
+.home-page {
+  width: 100%;
+  animation: homeFade 0.5s ease;
+}
+
+@keyframes homeFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.home-hero {
+  min-height: 410px;
+
+  display: grid;
+  grid-template-columns: 55% 45%;
+
+  overflow: hidden;
+
+  position: relative;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #17365d 0%,
+      #245d91 55%,
+      #2f80ed 100%
+    );
+
+  box-shadow:
+    0 12px 30px rgba(23, 54, 93, 0.15);
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 45px 50px;
+
+  position: relative;
+  z-index: 5;
+}
+
+.hero-badge {
+  width: fit-content;
+
+  padding: 7px 12px;
+
+  margin-bottom: 17px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  color: #f8d76b;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+}
+
+.hero-content h1 {
+  max-width: 520px;
+
+  color: #fff;
+
+  font-size: 38px;
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  margin-bottom: 15px;
+}
+
+.hero-content h1 span {
+  display: inline-block;
+
+  color: #f2c94c;
+}
+
+.hero-content p {
+  max-width: 510px;
+
+  color: #d9e7f5;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+
+  margin-bottom: 24px;
+}
+
+
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
+.hero-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.primary-btn,
+.secondary-btn {
+  height: 42px;
+
+  padding: 0 17px;
+
+  border-radius: 7px;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.primary-btn {
+  border: none;
+
+  background: #f2c94c;
+
+  color: #17365d;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+
+  background: #ffd95e;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.secondary-btn {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #fff;
+}
+
+.secondary-btn:hover {
+  background: #fff;
+
+  color: #17365d;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HERO DECORATION
+========================================= */
+
+.home-hero::before {
+  content: "";
+
+  width: 300px;
+  height: 300px;
+
+  position: absolute;
+
+  left: 42%;
+  bottom: -210px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.home-hero::after {
+  content: "";
+
+  width: 180px;
+  height: 180px;
+
+  position: absolute;
+
+  left: 45%;
+  top: -120px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================================
+   CHURCH VISUAL
+========================================= */
+
+.hero-visual {
+  min-height: 410px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* Sun */
+
+.sun-circle {
+  width: 95px;
+  height: 95px;
+
+  position: absolute;
+
+  right: 55px;
+  top: 45px;
+
+  border-radius: 50%;
+
+  background: #f2c94c;
+
+  box-shadow:
+    0 0 40px rgba(242, 201, 76, 0.3);
+
+  animation: sunPulse 3s ease-in-out infinite;
+}
+
+@keyframes sunPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+
+/* =========================================
+   CLOUDS
+========================================= */
+
+.cloud {
+  position: absolute;
+
+  height: 18px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  background: inherit;
+}
+
+.cloud::before {
+  width: 28px;
+  height: 28px;
+
+  left: 15px;
+  bottom: 5px;
+}
+
+.cloud::after {
+  width: 35px;
+  height: 35px;
+
+  right: 15px;
+  bottom: 5px;
+}
+
+.cloud-one {
+  width: 90px;
+
+  top: 105px;
+  left: 35px;
+}
+
+.cloud-two {
+  width: 70px;
+
+  top: 150px;
+  right: 125px;
+
+  opacity: 0.7;
+}
+
+
+/* =========================================
+   CHURCH BUILDING
+========================================= */
+
+.church-building {
+  width: 245px;
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 43px;
+
+  transform: translateX(-50%);
+}
+
+
+/* Cross */
+
+.church-cross {
+  width: 45px;
+  height: 65px;
+
+  position: absolute;
+
+  left: 50%;
+  top: -62px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #f2c94c;
+
+  font-size: 48px;
+
+  text-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.15);
+
+  z-index: 5;
+}
+
+
+/* Roof */
+
+.church-roof {
+  width: 0;
+  height: 0;
+
+  position: relative;
+
+  margin: 0 auto;
+
+  border-left: 145px solid transparent;
+  border-right: 145px solid transparent;
+
+  border-bottom: 105px solid #f2c94c;
+
+  filter:
+    drop-shadow(
+      0 8px 5px rgba(0, 0, 0, 0.12)
+    );
+}
+
+
+/* Roof inner */
+
+.church-roof::after {
+  content: "";
+
+  width: 190px;
+  height: 8px;
+
+  position: absolute;
+
+  left: -95px;
+  bottom: -108px;
+
+  border-radius: 5px;
+
+  background: #d7a936;
+}
+
+
+/* Church body */
+
+.church-body {
+  width: 230px;
+  height: 145px;
+
+  position: relative;
+
+  margin: -2px auto 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background: #f8f5ed;
+
+  border-radius: 2px 2px 0 0;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.13);
+}
+
+
+/* Windows */
+
+.church-window {
+  width: 39px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px 20px 5px 5px;
+
+  background: #5c9bd8;
+
+  border: 5px solid #e8dfcc;
+
+  color: #d8efff;
+
+  font-size: 15px;
+
+  box-shadow:
+    inset 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+
+/* Door */
+
+.church-door {
+  width: 55px;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 55px;
+
+  border-radius: 27px 27px 0 0;
+
+  background: #754d36;
+
+  border: 5px solid #e5d7bd;
+
+  font-size: 0;
+}
+
+.church-door::after {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+
+  margin-left: 30px;
+
+  border-radius: 50%;
+
+  background: #f2c94c;
+}
+
+
+/* =========================================
+   GROUND
+========================================= */
+
+.ground {
+  width: 100%;
+
+  height: 48px;
+
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #3e9862,
+      #28734a
+    );
+
+  border-radius: 50% 50% 0 0;
+}
+
+.ground::before,
+.ground::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 12px;
+
+  width: 10px;
+  height: 25px;
+
+  border-radius: 10px;
+
+  background: #54a76e;
+}
+
+.ground::before {
+  left: 20%;
+}
+
+.ground::after {
+  right: 20%;
+}
+
+
+/* =========================================
+   WELCOME SECTION
+========================================= */
+
+.welcome-section {
+  display: grid;
+
+  grid-template-columns: 1fr 330px;
+
+  gap: 25px;
+
+  margin-top: 25px;
+}
+
+
+/* Welcome Text */
+
+.welcome-text {
+  padding: 28px;
+
+  border-radius: 14px;
+
+  background: #fff;
+
+  border: 1px solid #e8edf2;
+
+  box-shadow:
+    0 5px 18px rgba(30, 50, 70, 0.05);
+}
+
+.section-label {
+  color: #2f80ed;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.welcome-text h2 {
+  max-width: 600px;
+
+  color: #26394c;
+
+  font-size: 23px;
+  line-height: 1.35;
+
+  margin: 10px 0 12px;
+}
+
+.welcome-text h2 span {
+  color: #2f80ed;
+}
+
+.welcome-text p {
+  max-width: 650px;
+
+  color: #7f8994;
+
+  font-size: 11px;
+
+  line-height: 1.8;
+}
+
+
+/* Quote */
+
+.welcome-quote {
+  position: relative;
+
+  padding: 28px;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff8df,
+      #fffdf5
+    );
+
+  border: 1px solid #f4e4a9;
+}
+
+.quote-icon {
+  color: #e3b52f;
+
+  font-family: Georgia, serif;
+
+  font-size: 45px;
+
+  line-height: 0.8;
+
+  margin-bottom: 10px;
+}
+
+.welcome-quote p {
+  color: #5e6570;
+
+  font-family: Georgia, serif;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  font-style: italic;
+}
+
+.welcome-quote span {
+  display: block;
+
+  margin-top: 12px;
+
+  color: #b18a25;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   FEATURE SECTION
+========================================= */
+
+.features-section {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+.feature-card {
+  min-height: 145px;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  padding: 20px;
+
+  overflow: hidden;
+
+  border-radius: 13px;
+
+  background: #fff;
+
+  border: 1px solid #e8edf2;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 12px 25px rgba(30, 50, 70, 0.1);
+}
+
+.feature-card::after {
+  content: "";
+
+  width: 65px;
+  height: 65px;
+
+  position: absolute;
+
+  right: -25px;
+  bottom: -25px;
+
+  border-radius: 50%;
+
+  opacity: 0.08;
+}
+
+.members-card::after {
+  background: #2f80ed;
+}
+
+.events-card::after {
+  background: #9b51e0;
+}
+
+.donation-card::after {
+  background: #27ae60;
+}
+
+.document-card::after {
+  background: #f2994a;
+}
+
+
+/* Feature Icon */
+
+.feature-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 13px;
+
+  border-radius: 10px;
+
+  font-size: 20px;
+}
+
+.members-card .feature-icon {
+  background: #eaf3ff;
+}
+
+.events-card .feature-icon {
+  background: #f4ebff;
+}
+
+.donation-card .feature-icon {
+  background: #eafaf1;
+}
+
+.document-card .feature-icon {
+  background: #fff3e8;
+}
+
+.feature-card h3 {
+  color: #34495e;
+
+  font-size: 13px;
+
+  margin-bottom: 6px;
+}
+
+.feature-card p {
+  max-width: 180px;
+
+  color: #8b949e;
+
+  font-size: 9px;
+
+  line-height: 1.6;
+}
+
+.feature-arrow {
+  position: absolute;
+
+  right: 18px;
+  bottom: 18px;
+
+  color: #b4bec8;
+
+  font-size: 17px;
+
+  transition: 0.2s ease;
+}
+
+.feature-card:hover .feature-arrow {
+  color: #2f80ed;
+
+  transform: translateX(4px);
+}
+
+
+/* =========================================
+   VERSE
+========================================= */
+
+.verse-section {
+  min-height: 170px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 25px;
+
+  padding: 30px;
+
+  text-align: center;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #17365d,
+      #245d91
+    );
+
+  color: #fff;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.verse-section::before {
+  content: "";
+
+  width: 220px;
+  height: 220px;
+
+  position: absolute;
+
+  right: -100px;
+  top: -120px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.verse-cross {
+  color: #f2c94c;
+
+  font-size: 22px;
+
+  margin-bottom: 10px;
+}
+
+.verse-section h2 {
+  max-width: 700px;
+
+  font-family: Georgia, serif;
+
+  font-size: 17px;
+
+  line-height: 1.6;
+
+  font-weight: 400;
+
+  font-style: italic;
+}
+
+.verse-section p {
+  margin-top: 8px;
+
+  color: #f2c94c;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.home-footer {
+  min-height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 5px;
+
+  color: #8c959e;
+
+  font-size: 9px;
+}
+
+.home-footer div {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: #526273;
+}
+
+.home-footer div:first-child {
+  font-size: 14px;
+}
+
+.home-footer strong {
+  font-size: 10px;
+}
+
+.home-footer span {
+  color: #a0a8b0;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+  .home-hero {
+    grid-template-columns: 1fr 40%;
+  }
+
+  .hero-content {
+    padding: 35px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .features-section {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .welcome-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .home-hero {
+    min-height: 450px;
+
+    display: block;
+  }
+
+  .hero-content {
+    min-height: 450px;
+
+    padding: 35px 25px;
+
+    justify-content: flex-start;
+  }
+
+  .hero-content h1 {
+    font-size: 29px;
+  }
+
+  .hero-content p {
+    max-width: 90%;
+
+    font-size: 10px;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  .hero-buttons {
+    flex-wrap: wrap;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    height: 40px;
+
+    padding: 0 14px;
+  }
+
+  .welcome-section {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .welcome-text,
+  .welcome-quote {
+    padding: 22px;
+  }
+
+  .welcome-text h2 {
+    font-size: 20px;
+  }
+
+  .features-section {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+  }
+
+  .feature-card {
+    min-height: 150px;
+
+    padding: 17px;
+  }
+
+  .verse-section {
+    padding: 25px 18px;
+  }
+
+  .verse-section h2 {
+    font-size: 14px;
+  }
+
+  .home-footer {
+    flex-direction: column;
+
+    gap: 8px;
+
+    text-align: center;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 430px) {
+
+  .hero-content {
+    padding: 30px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 25px;
+  }
+
+  .features-section {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    min-height: 125px;
+  }
+
+  .welcome-text h2 {
+    font-size: 18px;
+  }
+
+  .verse-section h2 {
+    font-size: 13px;
+  }
+}
